@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SPECTRA | DevOps Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+
+  <header>
+    <div class="logo">&#9632; SPECTRA</div>
+    <nav>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">CI/CD LIVE DEMO</div>
+    <h1>Push. <span class="accent">Deploy.</span><br/>Pull. Repeat.</h1>
+    <p class="sub">A static frontend — built with Maven, pushed via Jenkins, hosted on GitHub.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://github.com" target="_blank">&#9654; View on GitHub</a>
+      <span class="pill">v1.0.0 &nbsp;&#10003; Deployed</span>
+    </div>
+    <div class="terminal-box" id="terminal">
+      <span class="prompt">$</span> <span id="typed"></span><span class="cursor">_</span>
+    </div>
+  </section>
+
+  <section class="pipeline" id="pipeline">
+    <h2>CI/CD Pipeline</h2>
+    <div class="steps">
+      <div class="step" style="--i:0">
+        <div class="step-icon">01</div>
+        <div class="step-label">Code</div>
+        <div class="step-desc">Write HTML/CSS/JS locally in <code>src/</code></div>
+      </div>
+      <div class="arrow">&#8594;</div>
+      <div class="step" style="--i:1">
+        <div class="step-icon">02</div>
+        <div class="step-label">Maven Build</div>
+        <div class="step-desc">Validate & package using <code>mvn package</code></div>
+      </div>
+      <div class="arrow">&#8594;</div>
+      <div class="step" style="--i:2">
+        <div class="step-icon">03</div>
+        <div class="step-label">Jenkins Push</div>
+        <div class="step-desc">Jenkinsfile runs <code>git push</code> to GitHub</div>
+      </div>
+      <div class="arrow">&#8594;</div>
+      <div class="step" style="--i:3">
+        <div class="step-icon">04</div>
+        <div class="step-label">GitHub Pull</div>
+        <div class="step-desc">Server or user runs <code>git pull</code> to deploy</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack" id="stack">
+    <h2>Tech Stack</h2>
+    <div class="cards">
+      <div class="card"><span class="tag">Build</span>Apache Maven</div>
+      <div class="card"><span class="tag">CI/CD</span>Jenkins Pipeline</div>
+      <div class="card"><span class="tag">Version Control</span>Git + GitHub</div>
+      <div class="card"><span class="tag">Frontend</span>HTML · CSS · JS</div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>This project demonstrates a real DevOps workflow — no frameworks, no React, no Webpack. Just a clean static site driven through a proper <strong>Maven → Jenkins → GitHub</strong> pipeline. The Jenkinsfile defines all stages declaratively, and shell scripts handle git operations.</p>
+  </section>
+
+  <footer>
+    <span>&#9632; SPECTRA &mdash; DevOps Demo &copy; 2026</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
